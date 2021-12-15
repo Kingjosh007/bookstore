@@ -20,7 +20,6 @@ The project was divided into four (4) milestones. That in bold is what I'm worki
 
 This project is not deployed yet. It will be deployed later to **Github Pages**, **Heroku** and **Netlify**.
 
-
 ## Getting Started
 
 To get a local copy of this project running in development mode, do the following: 
