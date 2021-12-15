@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
@@ -42,5 +41,7 @@ const Books = () => {
     </>
   );
 };
+
+Books.propTypes = {};
 
 export default Books;
