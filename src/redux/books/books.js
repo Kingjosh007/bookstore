@@ -10,6 +10,7 @@ const initialState = [];
 
 export const getBooks = () => async (dispatch) => {
   const booksArr = await getData(booksEndpoint);
+  console.log(booksArr);
   dispatch({ type: GET_ALL_BOOKS, payload: booksArr });
 };
 
