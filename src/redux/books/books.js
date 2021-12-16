@@ -2,6 +2,7 @@ import { booksEndpoint, deleteData, postData } from '../../utils/apiRelated';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+const LOADING_BOOKS = 'bookStore/books/LOADING_BOOKS';
 
 const initialState = [];
 
