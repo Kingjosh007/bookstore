@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getBooks } from '../redux/books/books';
 
 const BookForm = (props) => {
   const { addBookProps } = props;
   const defaultCategory = 'Uncategorized';
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
 
   const [state, setState] = useState({
     title: '',
