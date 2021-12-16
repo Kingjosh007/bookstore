@@ -10,7 +10,6 @@ const initialState = [];
 
 export const getBooks = () => async (dispatch) => {
   const booksArr = await getData(booksEndpoint);
-  console.log(booksArr);
   dispatch({ type: GET_ALL_BOOKS, payload: booksArr });
 };
 
@@ -28,7 +27,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_BOOKS:
     {
-      return [...state, ...action.payload];
+      return [...action.payload];
     }
     case ADD_BOOK:
     {
@@ -36,7 +35,7 @@ const reducer = (state = initialState, action) => {
     }
     case REMOVE_BOOK:
     {
-      return [...state.filter((book) => book.id !== action.payload)];
+      return [...state.filter((book) => book.item_id !== action.payload)];
     }
 
     default:

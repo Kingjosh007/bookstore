@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getBooks } from '../redux/books/books';
 
 const Book = (props) => {
   const {
     itemId, title, author, category, handleDeleteProps,
   } = props;
   const elementId = `book${itemId}`;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
   return (
     <li className="single-book" id={elementId}>
       <div className="left-side">
