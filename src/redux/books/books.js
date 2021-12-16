@@ -1,3 +1,5 @@
+import { booksEndpoint, postData } from '../../utils/apiRelated';
+
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
@@ -17,6 +19,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
     {
+      postData(booksEndpoint, action.payload);
       return [...state, action.payload];
     }
     case REMOVE_BOOK:

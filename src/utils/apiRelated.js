@@ -16,6 +16,16 @@ const postData = async (url, data, isText = false) => {
   return res.json();
 };
 
+const deleteData = async (id) => {
+  const res = await fetch(deleteBookEndpoint(id), {
+    method: 'DELETE',
+    mode: 'cors',
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify({ item_id: id }),
+  });
+  return res.text();
+};
+
 const getData = async (url) => {
   const res = await fetch(url);
   return res.json();
@@ -24,6 +34,7 @@ const getData = async (url) => {
 export {
   postData,
   getData,
+  deleteData,
   appsEndpoint,
   booksEndpoint,
   deleteBookEndpoint,
