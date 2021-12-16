@@ -15,7 +15,7 @@ const Books = () => {
 
   const addBookToStore = (title, author, category) => {
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
       author,
       category,
@@ -32,8 +32,8 @@ const Books = () => {
       <ul className="listContainer">
         {books.map((book) => (
           <Book
-            key={book.id}
-            id={book.id}
+            key={book.item_id}
+            item_id={book.item_id}
             title={book.title}
             author={book.author}
             category={book.category}
