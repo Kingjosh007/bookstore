@@ -11,8 +11,8 @@ By building this app, I learned how to use React & Redux (and even connect them 
 The project was divided into four (4) milestones. That in bold is what I'm working on:
 
 - Milestone 1: Initialize project with components
-- **Milestone 2: Create and remove a book**
-- Milestone 3: Connect to API
+- Milestone 2: Create and remove a book
+- **Milestone 3: Connect to API**
 - Milestone 4: Style the app
 
 

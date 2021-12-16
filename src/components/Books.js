@@ -8,10 +8,9 @@ import BookForm from './BookForm';
 const Books = () => {
   const books = useSelector((state) => state.booksReducer);
   const dispatch = useDispatch();
-
   const addBookToStore = (title, author, category) => {
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title,
       author,
       category,
@@ -28,10 +27,10 @@ const Books = () => {
       <ul className="listContainer">
         {books.map((book) => (
           <Book
-            key={book.id}
-            id={book.id}
+            key={book.item_id}
+            itemId={book.item_id}
             title={book.title}
-            author={book.author}
+            author={book.author || 'Unknown'}
             category={book.category}
             handleDeleteProps={deleteBookFromStore}
           />

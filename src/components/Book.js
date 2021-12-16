@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getBooks } from '../redux/books/books';
 
 const Book = (props) => {
   const {
-    id, title, author, category, handleDeleteProps,
+    itemId, title, author, category, handleDeleteProps,
   } = props;
-  const elementId = `book${id}`;
+  const elementId = `book${itemId}`;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
   return (
     <li className="single-book" id={elementId}>
       <div className="left-side">
@@ -20,7 +28,7 @@ const Book = (props) => {
           <button
             type="button"
             className="remove-btn"
-            onClick={() => handleDeleteProps(id)}
+            onClick={() => handleDeleteProps(itemId)}
           >
             Remove
           </button>
@@ -46,7 +54,7 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  id: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
