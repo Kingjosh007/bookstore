@@ -1,4 +1,6 @@
-import { booksEndpoint, deleteData, getData, postData } from '../../utils/apiRelated';
+import {
+  booksEndpoint, deleteData, getData, postData,
+} from '../../utils/apiRelated';
 
 const GET_ALL_BOOKS = 'bookStore/books/GET_ALL_BOOKS';
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
@@ -14,13 +16,12 @@ export const getBooks = () => async (dispatch) => {
 export const addBook = (payload) => async (dispatch) => {
   await postData(booksEndpoint, payload);
   dispatch({ type: ADD_BOOK, payload });
-}
+};
 
 export const removeBook = (payload) => async (dispatch) => {
   await deleteData(payload);
   dispatch({ type: REMOVE_BOOK, payload });
-}
-
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
