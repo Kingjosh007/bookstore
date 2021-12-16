@@ -28,7 +28,9 @@ const deleteData = async (id) => {
 
 const getData = async (url) => {
   const res = await fetch(url);
-  return res.json();
+  const data = await res.json() || {};
+  const dataArr = Object.keys(data).map((key) => ({ item_id: key, ...data[key] }));
+  return dataArr;
 };
 
 export {
