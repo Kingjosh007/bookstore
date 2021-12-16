@@ -1,34 +1,18 @@
-import axios from 'axios';
-import { booksEndpoint, deleteData, postData } from '../../utils/apiRelated';
+import { booksEndpoint, deleteData, getData, postData } from '../../utils/apiRelated';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const LOADING_BOOKS = 'bookStore/books/LOADING_BOOKS';
-const SUCCESS = 'bookStore/books/SUCCESS';
-const FAILURE = 'bookStore/books/FAILURE';
+const GET_ALL_BOOKS = 'bookStore/books/GET_ALL_BOOKS';
 
-const initialState = {
-  books: [],
-  loading: false,
-  error: '',
-};
+const initialState = [];
 
-export const getBooks = (dispatch) => {
-  dispatch({ type: LOADING_BOOKS });
-  axios.get(booksEndpoint)
-    .then((res) => {
-      let data = [];
-      try {
-        data = res.json();
-      } catch (err) {
-        data = [];
-      }
-      dispatch({ type: SUCCESS, payload: data });
-    })
-    .catch((err) => dispatch({ type: FAILURE, payload: err }));
+export const getBooks = () => async (dispatch) => {
+  let booksArr = await getData(booksEndpoint);
+  dispatch({ type: GET_ALL_BOOKS, payload: booksArr });
 };
 
 export const addBook = (payload) => ({
+
   type: ADD_BOOK,
   payload,
 });
@@ -49,18 +33,14 @@ const reducer = (state = initialState, action) => {
         error: '',
       };
     }
-    case SUCCESS:
+    case GET_ALL_BOOKS:
     {
-      return {
-        ...state,
-        books: action.payload,
-        loading: false,
-        error: '',
-      };
+      return [...state, ...action.payload];
     }
     case ADD_BOOK:
     {
-      postData(booksEndpoint, action.payload);
+      axios.post(booksEndpoint, action.payload)
+           .then((res) => dis 
       return [...state, action.payload];
     }
     case REMOVE_BOOK:
