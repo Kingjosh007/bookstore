@@ -12,13 +12,13 @@ The project was divided into four (4) milestones. That in bold is what I'm worki
 
 - Milestone 1: Initialize project with components
 - Milestone 2: Create and remove a book
-- **Milestone 3: Connect to API**
-- Milestone 4: Style the app
+- Milestone 3: Connect to API
+- **Milestone 4: Style the app**
 
 
 ## Live Demo
 
-This project is not deployed yet. It will be deployed later to **Github Pages**, **Heroku** and **Netlify**.
+This project is not deployed yet. It will be deployed later to **Github Pages** and **Netlify**.
 
 ## Getting Started
 
@@ -34,7 +34,7 @@ To get a local copy of this project running in development mode, do the followin
 
 ## Screenshot
 
-Nothing to see yet. A gif screenshot will be available from the next milestone.
+![Screenshot after styling the app (milestone 4)](screenshots/4-styling.gif)
 
 ## Built With
 

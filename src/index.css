@@ -1,5 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
+  margin-top: 7em;
+  background-color: #f5f6fa;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navbar-logo {
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-family: Montserrat, sans-serif;
+  margin-left: 2.9em;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.navbar ul li {
+  font-family: Montserrat, sans-serif;
+  opacity: 0.5;
+  letter-spacing: 1.9px;
+  color: #f5f6fa;
+  font-size: 0.813rem;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  opacity: 0.5;
+  color: #121212;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: #0290ff;
+}
+
+.nav-link.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* BOOKS */
+
+.listContainer {
+  margin-inline: 2.9em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+}
+
+/* BOOK */
+
+.single-book {
+  padding-block: 2rem;
+  padding-inline: 1.688rem;
+  background-color: #fff;
+  border: solid 1px #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.313rem;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.book-details .book-category {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-details .book-title {
+  font-family: RobotoSlab, serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.book-details .book-author {
+  color: #4386bf;
+  font-family: RobotoSlab, serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  letter-spacing: normal;
+}
+
+.book-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-buttons button {
+  background: none;
+  color: #4386bf;
+  border: none;
+  padding: 0;
+  font-family: RobotoSlab, serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.book-buttons .separator {
+  color: #e8e8e8;
+}
+
+.middle-side {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-left: 7rem;
+}
+
+.pctg-text .pctg-value {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.pctg-text .pctg-keyword {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.sides-separator {
+  width: 0.125rem;
+  height: 6.375rem;
+  border: solid 1px #e8e8e8;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-right: 12rem;
+}
+
+.right-side .current-text {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.right-side .current-value {
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.current-value .cv-pctg {
+  margin-left: 0.15rem;
+}
+
+.update-prog-btn {
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.update-prog-btn:hover {
+  background-color: #4386bf;
+}
+
+/* BOOKFORM */
+
+.add-book-form {
+  padding-inline: 2.8rem;
+  margin-left: 2.5rem;
+  margin-top: -20px;
+  margin-bottom: 4em;
+}
+
+.add-book-form h3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.add-form {
+  display: flex;
+  gap: 3.125rem;
+}
+
+input,
+select {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+  background-color: #fff;
+  border: solid 1px #e8e8e8;
+}
+
+input {
+  font-weight: bold;
+}
+
+input:placeholder-shown {
+  color: #c4c4c4;
+  font-weight: 300;
+}
+
+.title-input {
+  width: 30%;
+}
+
+.add-book-btn {
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-book-btn:hover {
+  background-color: #082844;
 }

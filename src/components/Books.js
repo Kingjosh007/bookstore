@@ -35,6 +35,7 @@ const Books = () => {
             handleDeleteProps={deleteBookFromStore}
           />
         ))}
+        <hr />
       </ul>
       <BookForm addBookProps={addBookToStore} />
     </>
