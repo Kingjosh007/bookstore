@@ -12,8 +12,8 @@ The project was divided into four (4) milestones. That in bold is what I'm worki
 
 - Milestone 1: Initialize project with components
 - Milestone 2: Create and remove a book
-- **Milestone 3: Connect to API**
-- Milestone 4: Style the app
+- Milestone 3: Connect to API
+- **Milestone 4: Style the app**
 
 
 ## Live Demo
