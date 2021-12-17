@@ -51,6 +51,11 @@ body {
   text-decoration: none;
 }
 
+.nav-link:hover {
+  opacity: 1;
+  color: #0290ff;
+}
+
 .nav-link.active {
   opacity: 1;
   font-weight: bold;
