@@ -238,7 +238,8 @@ body {
   gap: 3.125rem;
 }
 
-input, select {
+input,
+select {
   padding: 0.5rem 1rem 0.5rem 1rem;
   font-size: 1rem;
   letter-spacing: -0.15px;
