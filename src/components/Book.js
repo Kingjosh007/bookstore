@@ -60,8 +60,13 @@ const Book = (props) => {
       <div className="sides-separator" />
       <div className="right-side">
         <div className="current-text">Current chapter</div>
-        <div className="current-value">{chaptersCompleted}</div>
-        <button type="button" className="">Update progress</button>
+        <div className="current-value">
+          Chapter
+          <span className="cv-pctg">
+            {chaptersCompleted}
+          </span>
+        </div>
+        <button type="button" className="update-prog-btn">Update progress</button>
       </div>
     </li>
   );
