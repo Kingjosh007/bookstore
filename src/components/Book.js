@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Progress } from 'react-sweet-progress';
+import 'react-sweet-progress/lib/style.css';
 import { getBooks } from '../redux/books/books';
 
 const Book = (props) => {
@@ -13,6 +15,9 @@ const Book = (props) => {
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
+
+  const randomPctg = Math.floor(Math.random() * 100);
+  const chaptersCompleted = Math.round(25 * (randomPctg / 100));
 
   return (
     <li className="single-book" id={elementId}>
@@ -37,7 +42,9 @@ const Book = (props) => {
         </div>
       </div>
       <div className="middle-side">
-        <div className="pctg-graphics" />
+        <div className="pctg-graphics">
+          <Progress type="circle" percent={randomPctg} />
+        </div>
         <div className="pctg-text">
           <div className="pctg-value" />
           <div className="pctg-keyword">Completed</div>
@@ -46,7 +53,7 @@ const Book = (props) => {
       <div className="sides-separator" />
       <div className="right-side">
         <div className="current-text">Current chapter</div>
-        <div className="current-value">{17}</div>
+        <div className="current-value">{chaptersCompleted}</div>
         <button type="button" className="">Update progress</button>
       </div>
     </li>

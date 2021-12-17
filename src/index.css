@@ -77,11 +77,11 @@ body {
 
 .single-book {
   padding-block: 2rem;
-  padding-left: 1.688rem;
+  padding-inline: 1.688rem;
   background-color: #fff;
   border: solid 1px #e8e8e8;
   display: flex;
-  gap: 3em;
+  justify-content: space-between;
 }
 
 .left-side {
