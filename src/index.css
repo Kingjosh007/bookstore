@@ -141,3 +141,22 @@ body {
 .book-buttons .separator {
   color: #e8e8e8;
 }
+
+.middle-side {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.pctg-text .pctg-value {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.pctg-text .pctg-keyword {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}

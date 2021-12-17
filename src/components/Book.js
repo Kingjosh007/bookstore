@@ -43,10 +43,17 @@ const Book = (props) => {
       </div>
       <div className="middle-side">
         <div className="pctg-graphics">
-          <Progress type="circle" percent={randomPctg} />
+          <Progress
+            type="circle"
+            percent={randomPctg}
+            width={70}
+          />
         </div>
         <div className="pctg-text">
-          <div className="pctg-value" />
+          <div className="pctg-value">
+            {randomPctg}
+            %
+          </div>
           <div className="pctg-keyword">Completed</div>
         </div>
       </div>
