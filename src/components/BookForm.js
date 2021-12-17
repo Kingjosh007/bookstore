@@ -36,11 +36,13 @@ const BookForm = (props) => {
 
   return (
     <div className="add-book-form">
+      <hr />
       <h3>ADD NEW BOOK</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="add-form">
         <input
           name="title"
           type="text"
+          className="title-input"
           placeholder="Book title"
           onChange={handleChange}
           value={state.title}
@@ -49,12 +51,14 @@ const BookForm = (props) => {
         <input
           name="author"
           type="text"
+          className="author-input"
           placeholder="Author's name"
           onChange={handleChange}
           value={state.author}
         />
         <select
           name="category"
+          className="category-select"
           onChange={handleChange}
         >
 
@@ -65,7 +69,7 @@ const BookForm = (props) => {
           <option key="Science Fiction" value="Science Fiction">Science Fiction</option>
 
         </select>
-        <button type="submit">ADD BOOK</button>
+        <button type="submit" className="add-book-btn">ADD BOOK</button>
       </form>
     </div>
   );

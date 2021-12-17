@@ -215,3 +215,60 @@ body {
 .update-prog-btn:hover {
   background-color: #4386bf;
 }
+
+/* BOOKFORM */
+
+.add-book-form {
+  padding-inline: 2.8rem;
+  margin-left: 2.5rem;
+  margin-top: -20px;
+  margin-bottom: 4em;
+}
+
+.add-book-form h3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.add-form {
+  display: flex;
+  gap: 3.125rem;
+}
+
+input, select {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+  background-color: #fff;
+  border: solid 1px #e8e8e8;
+}
+
+input {
+  font-weight: bold;
+}
+
+input:placeholder-shown {
+  color: #c4c4c4;
+  font-weight: 300;
+}
+
+.title-input {
+  width: 30%;
+}
+
+.add-book-btn {
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.add-book-btn:hover {
+  background-color: #082844;
+}
