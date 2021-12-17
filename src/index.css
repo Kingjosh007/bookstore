@@ -5,7 +5,7 @@
 }
 
 body {
-  margin-top: 6em;
+  margin-top: 7em;
   background-color: #f5f6fa;
 }
 
@@ -59,4 +59,21 @@ body {
 .nav-link.active {
   opacity: 1;
   font-weight: bold;
+}
+
+/* BOOKS */
+
+.listContainer {
+  margin-inline: 2.9em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+}
+
+/* BOOK */
+
+.single-book {
+  background-color: #fff;
+  border: solid 1px #e8e8e8;
+  display: flex;
 }
