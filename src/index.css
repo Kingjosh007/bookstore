@@ -81,13 +81,14 @@ body {
   background-color: #fff;
   border: solid 1px #e8e8e8;
   display: flex;
-  gap: 1em;
+  gap: 3em;
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1.313rem;
 }
 
 .book-details {
@@ -112,10 +113,31 @@ body {
   color: #121212;
 }
 
-.book-details .book-author{
+.book-details .book-author {
   color: #4386bf;
   font-family: RobotoSlab, serif;
   font-weight: 300;
   font-size: 0.875rem;
   letter-spacing: normal;
+}
+
+.book-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-buttons button {
+  background: none;
+  color: #4386bf;
+  border: none;
+  padding: 0;
+  font-family: RobotoSlab, serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.book-buttons .separator {
+  color: #e8e8e8;
 }
