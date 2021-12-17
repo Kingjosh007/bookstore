@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -73,7 +75,41 @@ body {
 /* BOOK */
 
 .single-book {
+  padding-block: 2rem;
+  padding-left: 1.688rem;
   background-color: #fff;
   border: solid 1px #e8e8e8;
   display: flex;
+  gap: 1em;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.book-details .book-category {
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-details .book-title {
+  font-family: RobotoSlab, serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-details .book-author{
+  
 }

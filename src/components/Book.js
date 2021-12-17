@@ -20,7 +20,7 @@ const Book = (props) => {
         <div className="book-details">
           <div className="book-category">{category}</div>
           <div className="book-title">{title}</div>
-          <div className="book-category">{author}</div>
+          <div className="book-author">{author}</div>
         </div>
         <div className="book-buttons">
           <button type="button" className="comments-btn">Comments</button>
